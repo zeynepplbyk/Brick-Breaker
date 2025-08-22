@@ -80,3 +80,10 @@ Bu proje ile mikrodenetleyici tabanlı bir oyun makinesi başarılı bir şekild
 ---
 
 ## 🎮 Oyun Akışı
+
+
+
+https://github.com/user-attachments/assets/77d803a7-8946-4ca9-81b6-21196a3ee697
+
+
+
