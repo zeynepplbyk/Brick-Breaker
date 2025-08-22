@@ -1,10 +1,5 @@
-# 🧱 Brick Breaker - Mikrodenetleyici Tabanlı Oyun Makinesi
+## 🧱 Brick Breaker - Mikrodenetleyici Tabanlı Oyun Makinesi
 
-## Proje 2.2
-
-**Geliştiriciler:**  
-- Zeynep Palabıyık – Bilgisayar Mühendisliği, Kocaeli Üniversitesi, Kocaeli, Türkiye – 220202016@kocaeli.edu.tr  
-- Asude Çetin – Bilgisayar Mühendisliği, Kocaeli Üniversitesi, Ankara, Türkiye – 220202060@kocaeli.edu.tr  
 
 ---
 
