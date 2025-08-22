@@ -1,65 +1,87 @@
-# Brick-Breaker
+# 🧱 Brick Breaker - Mikrodenetleyici Tabanlı Oyun Makinesi
 
-Bu projenin amacı, çeşitli araçlar kullanarak
-mikrodenetleyici tabanlı bir oyun makinesi geliştirildi. Oyuncu,
-bir fiziksel palet kontrol cihazını kullanarak bir topu yansıtarak
-OLED ekrandaki tuğlaları kırmaya çalışacaktır. Oyuncu, özel bir
-fiziksel "palet kontrol cihazı" kullanarak oyunu kontrol edecek.
-Cihaz, potansiyometreyle yönlendirilecek. OLED ekran, oyun
-alanını canlı olarak gösterecek. Oyun alanı, üstte tuğlalar, altta
-oyuncunun kontrol ettiği palet ve zıplayan bir top içerecek.
-Oyuncunun amacı, topu kullanarak tuğlaları kırmak ve puan
-kazanmak olacak. Puan, 7 segment display'de gösterilir. Top,
-palet veya duvarlara çarpınca yön değiştirir. Ekranın sağ ve sol
-kenarları topun sınırları var. Oyun başarıyla tamamlandığında,
-topun önceki hızının %20 daha fazlasıyla bir sonraki oyun
-başlayacak. Seviye atlandığında skorbord sıfırlanmayacak ve
-önceki puan korunacak. Oyun, topun alt kısmına düşmesiyle
-sona erecek. Bu proje, wokwi kullanılarak geliştirildi ve
-mikrodenetleyici ve sensörlerin etkin kullanımını içerecek.
-Anahtar Kelimeler — Led, 7segment, palet kontrol, tuğla…
+## Proje 2.2
 
+**Geliştiriciler:**  
+- Zeynep Palabıyık – Bilgisayar Mühendisliği, Kocaeli Üniversitesi, Kocaeli, Türkiye – 220202016@kocaeli.edu.tr  
+- Asude Çetin – Bilgisayar Mühendisliği, Kocaeli Üniversitesi, Ankara, Türkiye – 220202060@kocaeli.edu.tr  
 
-## DENEY SONUÇLARI
-OLED Ekran: Oyunun başlangıç ekranı, oyun alanı ve
-diğer grafikler sorunsuz bir şekilde gösterilmiştir.
-Yedi Segment Gösterge: Skor artışını doğru bir şekilde
-göstermiştir.
+---
 
-LED'ler: Oyuncunun kalan canlarını doğru şekilde
-göstermiştir.
+## 🎯 Proje Özeti
+Bu projenin amacı, bir mikrodenetleyici tabanlı oyun makinesi geliştirmektir. Oyuncu, özel bir fiziksel **palet kontrol cihazı** ile topu yönlendirerek OLED ekranda bulunan tuğlaları kırmayı hedefler.  
 
-Potansiyometre: Paletin hareket kontrolü, hassas bir şekilde
-çalışmıştır.
+Oyun mekanikleri:
+- Top, palet, tuğlalar ve duvarlara çarptığında yön değiştirir.  
+- Oyuncunun amacı, tuğlaları kırarak puan kazanmaktır.  
+- Skor, 7 segment display üzerinde gösterilir.  
+- Oyuncunun 3 canı vardır; canlar LED ile gösterilir.  
+- Tuğlalar kırıldığında %10 şansla obje düşer ve paletle yakalanırsa can artar.  
+- Tüm tuğlalar kırıldığında 5 saniyelik ara ekran sonrası yeni bölüm başlar, top hızı %20 artar.  
+- Işık sensörüne göre arka plan ve tuğlalar ters renkli gösterilebilir.  
 
-Palet Kontrolü: Potansiyometre ile paletin sağa ve sola
-hareketi, istenilen şekilde çalışmıştır.
+---
 
-Top Hareketi: Topun çarpma ve yön değiştirme mekaniği,
-fiziksel kurallara uygun şekilde çalışmıştır. Top, paletle temas
-ettiğinde, yönünü doğru şekilde değiştirmiştir.
+## 🕹️ Oyun Mekaniği
 
-Tuğlalar ve Skor: Her tuğla kırıldığında, yedi segment
-gösterge üzerindeki skor artmış ve OLED ekranda tuğla
-kaybolmuştur.
+### Başlatma ve Kontrol
+- "Başlat" tuşuna basıldığında oyun ekranı açılır ve oyun başlar.  
+- Potansiyometre ile paletin sağa ve sola hareketi kontrol edilir.  
 
-Can Sistemi: Oyuncu topu kaçırdığında, LED'ler ile
-gösterilen can sayısı düşmüştür.
+### Top ve Tuğlalar
+- Top, çarpma mekaniğine göre yön değiştirir.  
+- Tuğlalar kırıldığında skor 1 artar ve OLED ekranda tuğla kaybolur.  
 
-Obje Düşürme ve Can Artışı: Tuğla kırıldığında %10 şans
-ile obje düşme mekaniği doğru şekilde çalışmış ve paletle
-yakalandığında can artışı doğru şekilde gerçekleşmiştir.
+### Can Sistemi
+- Top paletle kurtarılamayıp düşerse, oyuncunun canı 1 azalır.  
+- LED’ler ile kalan can sayısı gösterilir.  
 
-Bölüm Değişimi ve Hız Artışı: Tüm tuğlalar kırıldığında,
-oyun 5 saniyelik bir ara ekran göstermiş ve ardından topun hızı
-%20 artarak yeni bir bölüm başlamıştır. Skor, önceki turdan
-devam etmiştir.
+### Bölüm ve Hız
+- Tüm tuğlalar kırıldığında 5 saniyelik ara ekran gösterilir.  
+- Yeni bölümde tuğla düzeni farklıdır ve top hızı önceki turdan %20 daha hızlıdır.  
+- Skor önceki turdan devam eder.  
 
-Oyunun başlangıcı ve bitiş mekanikleri de test edilmiştir.
-Başlangıç menüsünde "Başlat" ve "Çıkış" seçenekleri sorunsuz
-şekilde çalışmıştır. Oyun bitiminde, oyuncu 3 canını
-kaybettiğinde, skor 3 saniye boyunca gösterilmiş ve ardından
-ana menüye dönülmüştür. Çıkış seçeneği seçildiğinde, uygun
-bir teşekkür mesajı görüntülenmiştir.
+---
 
-<img width="640" alt="Ekran Resmi 2024-06-01 11 20 10" src="https://github.com/zeynepplbyk/Brick-Breaker/assets/125740535/3fb4315a-71c5-47d9-8e20-e8ab9615b57a">
+## 🛠️ Kullanılan Donanım ve Yazılım
+
+**Donanım:**
+- Arduino mikrodenetleyici  
+- OLED ekran (oyun alanı için)  
+- 7 segment display (skor takibi)  
+- LED’ler (can durumu)  
+- Potansiyometre (palet kontrol)  
+
+**Yazılım:**
+- Arduino IDE  
+- Oyun mekaniği, top hareketi, palet kontrolü, tuğla kırılması, skor ve can sistemi kodlandı  
+- Başlat/Çıkış tuşları ile temel kullanıcı etkileşimi  
+
+---
+
+## 📊 Deneysel Sonuçlar
+- OLED ekran: Başlangıç ve oyun ekranı sorunsuz çalıştı.  
+- 7 segment display: Skor doğru gösterildi.  
+- LED’ler: Can sayısı doğru şekilde güncellendi.  
+- Potansiyometre: Palet kontrolü hassas ve doğru çalıştı.  
+- Top hareketi: Çarpma ve yön değiştirme fizik kurallarına uygun çalıştı.  
+- Tuğlalar ve skor: Tuğla kırıldığında OLED ve skor göstergesi doğru güncellendi.  
+- Bölüm değişimi ve hız artışı doğru çalıştı.  
+- Oyunun başlangıç ve bitiş menüleri sorunsuz çalıştı.  
+
+---
+
+## 📌 Sonuç
+Bu proje ile mikrodenetleyici tabanlı bir oyun makinesi başarılı bir şekilde geliştirilmiştir. Oyun mekanikleri, elektronik bileşenler ve kontrol sistemi beklenen şekilde çalışmıştır. Bölüm geçişleri, hız artışı, can artırma ve skor mekanikleri sorunsuz uygulanmıştır.  
+
+---
+
+## 📚 Kaynakça
+1. [Arduino Dokümantasyonu](https://docs.arduino.cc)  
+2. [Wokwi Platformu](https://wokwi.com)  
+3. [YouTube - Arduino Brick Breaker Örnek](https://www.youtube.com/watch?v=WhUbsy1s0Vs&t=1280s)  
+4. [YouTube - Tuğla Oyunu Geliştirme](https://www.youtube.com/watch?v=SMh4sbidbaA&list=PLFOSdDqm35feuJXiWzI64TAmnLJ0y29-W)  
+
+---
+
+## 🎮 Oyun Akışı
